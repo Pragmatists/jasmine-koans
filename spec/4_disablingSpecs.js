@@ -2,8 +2,7 @@ xdescribe("A disabled suite", function () {
     var foo;
 
     beforeEach(function () {
-        foo = 0;
-        foo += 1;
+        foo = 2
     });
 
     it("has all specs disabled", function () {

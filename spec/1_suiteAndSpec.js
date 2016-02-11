@@ -22,7 +22,7 @@ describe("A suite", function () {
         expect(true).toEqual(true);
     });
 
-    describe("ca have nested describe", function () {
+    describe("can have nested describe", function () {
         var bar;
 
         beforeEach(function () {
