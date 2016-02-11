@@ -1,22 +1,16 @@
 describe("custom equality", function () {
 
-    var myCustomEquality = function (first, second) {
-
-        if (typeof first == "string" && typeof second == "string") {
-            return first[0] == second[1];
-        }
-
-    };
 
     beforeEach(function () {
-        jasmine.addCustomEqualityTester(myCustomEquality);
+        //Add custom equality tester using "jasmine.addCustomEqualityTester" that will be
+        //comparing length of string for equality
     });
 
-    it("should be custom equal", function () {
-        expect("abc").toEqual("aaa");
+    it("should be custom equal because has same length", function () {
+        expect("aaa").toEqual("bbb");
     });
 
-    it("should be custom not equal", function () {
-        expect("abc").not.toEqual("abc");
+    it("should be custom not equal because has diferent length", function () {
+        expect("aaa").not.toEqual("bbbb");
     });
 });

@@ -11,21 +11,23 @@ describe("A spy, when configured to fake a return value", function() {
             }
         };
 
+    });
+
+    it("tracks that the spy was called", function() {
+        spyOn(foo, "getBar").and.returnValue(745);
+
+        foo.getBar();
+
+        //Add assertion that "foo.getBar" was called
+    });
+
+
+    it("when called returns the requested value", function() {
         spyOn(foo, "getBar").and.returnValue(745);
 
         foo.setBar(123);
         fetchedBar = foo.getBar();
-    });
 
-    it("tracks that the spy was called", function() {
-        expect(foo.getBar).toHaveBeenCalled();
-    });
-
-    it("should not affect other functions", function() {
-        expect(bar).toEqual(123);
-    });
-
-    it("when called returns the requested value", function() {
-        expect(fetchedBar).toEqual(745);
+        //Add assertion on "fetchedBar" value
     });
 });

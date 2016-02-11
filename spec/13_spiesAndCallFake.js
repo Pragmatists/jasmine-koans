@@ -20,14 +20,25 @@ describe("A spy, when configured with an alternate implementation", function() {
     });
 
     it("tracks that the spy was called", function() {
-        expect(foo.getBar).toHaveBeenCalled();
+        spyOn(foo, "getBar").and.callFake(function() {
+            return 1001;
+        });
+
+        foo.setBar(123);
+        fetchedBar = foo.getBar();
+
+        //Add assertion that "foo.getBar" was called
     });
 
-    it("should not affect other functions", function() {
-        expect(bar).toEqual(123);
-    });
 
     it("when called returns the requested value", function() {
-        expect(fetchedBar).toEqual(1001);
+        spyOn(foo, "getBar").and.callFake(function() {
+            return 1001;
+        });
+
+        foo.setBar(123);
+        fetchedBar = foo.getBar();
+
+        //Add assertion on "fetchedBar" value
     });
 });

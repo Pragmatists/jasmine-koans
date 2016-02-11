@@ -28,11 +28,11 @@ describe("The 'toEqual' matcher", function() {
 describe("The 'toBe' matcher", function() {
 
     it("has a positive case", function() {
-        expect(true).toBe(true);
+        //Use 'toBe' to expect that true is true
     });
 
     it("and can have a negative case", function() {
-        expect(false).not.toBe(true);
+        ///Use 'toBe' to expect that false is not true
     });
 
 
@@ -41,8 +41,8 @@ describe("The 'toBe' matcher", function() {
         var b = a;
 
         expect(a).toBe(b);
-        expect(a===b).toBe(true);
-        expect(a).not.toBe(null);
+        //expect(a===b).toBe(?);
+        //Add assertion to expect that a is not null
     });
 
 });
@@ -61,8 +61,9 @@ it("The 'toBeDefined' matcher compares against `undefined`", function() {
         foo: "foo"
     };
 
-    expect(a.foo).toBeDefined();
-    expect(a.bar).not.toBeDefined();
+    //Add assertion to expect that a.foo is defined
+    //Add assertion to expect that a.bar is not defined
+
 });
 
 it("The `toBeUndefined` matcher compares against `undefined`", function() {
@@ -70,62 +71,67 @@ it("The `toBeUndefined` matcher compares against `undefined`", function() {
         foo: "foo"
     };
 
-    expect(a.foo).not.toBeUndefined();
-    expect(a.bar).toBeUndefined();
+    //Add assertion to expect that a.foo is defined using toBeUndefined
+    //Add assertion to expect that a.bar is not defined using toBeUndefined
 });
 
 it("The 'toBeNull' matcher compares against null", function() {
     var a = null;
     var foo = "foo";
 
-    expect(null).toBeNull();
-    expect(a).toBeNull();
-    expect(foo).not.toBeNull();
+    //Add assertion to expect that a is null
+    //Add assertion to expect that foo is not null
 });
 
 it("The 'toBeTruthy' matcher is for boolean casting testing", function() {
-    var a, foo = "foo";
+    var a = false;
+    var b = "false";
+    var c = undefined;
+    var foo = "foo";
 
-    expect(foo).toBeTruthy();
-    expect(a).not.toBeTruthy();
+    //Use 'toBeTruthy' to check all values
 });
 
 it("The 'toBeFalsy' matcher is for boolean casting testing", function() {
-    var a, foo = "foo";
+    var a = false;
+    var b = "true";
+    var c = undefined;
+    var foo = "foo";
 
-    expect(a).toBeFalsy();
-    expect(foo).not.toBeFalsy();
+    //Use 'toBeFalsy' to check all values
 });
 
 it("The 'toContain' matcher is for finding an item in an Array", function() {
     var a = ["foo", "bar", "baz"];
 
-    expect(a).toContain("bar");
-    expect(a).not.toContain("quux");
+    //Add assertion to expect that a contains "bar"
+    //Add assertion to expect that a does not contain "quux"
 });
 
 it("The 'toBeLessThan' matcher is for mathematical comparisons", function() {
     var pi = 3.1415926,
         e = 2.78;
 
-    expect(e).toBeLessThan(pi);
-    expect(pi).not.toBeLessThan(e);
+    //Add assertion to expect that e is less than pi
+    //Add assertion to expect that pi is not less than e
 });
 
 it("The 'toBeGreaterThan' matcher is for mathematical comparisons", function() {
     var pi = 3.1415926,
         e = 2.78;
 
-    expect(pi).toBeGreaterThan(e);
-    expect(e).not.toBeGreaterThan(pi);
+    //Add assertion to expect that pi is greater than e
+    //Add assertion to expect that e is not greater than pi
 });
 
 it("The 'toBeCloseTo' matcher is for precision math comparison", function() {
     var pi = 3.1415926,
+        a = 3.13,
         e = 2.78;
 
-    expect(pi).not.toBeCloseTo(e, 2);
-    expect(pi).toBeCloseTo(e, 0);
+    //Add assertion that "pi" variable is close to "a" within one decimal point
+    //Add assertion that "pi" variable is not close to "a" within two decimal points
+    //Figure out what happens when you assert "pi" with "e" using toBeCloseTo with second argument 0
 });
 
 it("The 'toThrow' matcher is for testing if a function throws an exception", function() {
@@ -136,8 +142,8 @@ it("The 'toThrow' matcher is for testing if a function throws an exception", fun
         return a + 1;
     };
 
-    expect(foo).not.toThrow();
-    expect(bar).toThrow();
+    //Add assertion to expect that foo is not throwing exception
+    //Add assertion to expect that bar is throwing exception
 });
 
 it("The 'toThrowError' matcher is for testing a specific thrown exception", function() {
@@ -145,8 +151,7 @@ it("The 'toThrowError' matcher is for testing a specific thrown exception", func
         throw new TypeError("foo bar baz");
     };
 
-    expect(foo).toThrowError("foo bar baz");
-    expect(foo).toThrowError(/bar/);
-    expect(foo).toThrowError(TypeError);
-    expect(foo).toThrowError(TypeError, "foo bar baz");
+    //Add assertion to expect that foo is throwing exception with message "foo bar baz"
+    //Add assertion to expect that foo is throwing exception of specific Type
+    //Add assertion to expect that foo is throwing exception of specific Type and message in one assertion
 });

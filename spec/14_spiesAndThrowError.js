@@ -8,10 +8,12 @@ describe("A spy, when configured to throw an error", function() {
             }
         };
 
-        spyOn(foo, "setBar").and.throwError("quux");
+
     });
 
     it("throws the value", function() {
+        spyOn(foo, "setBar").and.throwError("quux");
+
         expect(function() {
             foo.setBar(123)
         }).toThrowError("quux");

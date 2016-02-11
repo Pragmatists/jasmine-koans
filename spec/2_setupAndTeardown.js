@@ -10,11 +10,13 @@ describe("A spec (with setup and tear-down)", function () {
     });
 
     it("setups data for tests", function () {
-        expect(foo).toEqual(1);
+        //Fix assertion
+        //expect(foo).toEqual(?);
     });
 
     it("have tear-down code to cleanup after tests", function () {
-        expect(foo).toEqual(1);
+        //Fix assertion
+        //expect(foo).toEqual(?);
     });
 });
 

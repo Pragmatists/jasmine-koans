@@ -1,3 +1,4 @@
+//Open SpecRunner.html in browser and see how names of specs are created
 describe("A suite", function () {
     var foo = 1;
 

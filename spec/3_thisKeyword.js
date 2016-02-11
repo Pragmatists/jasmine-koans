@@ -9,7 +9,8 @@ describe("A spec", function () {
     });
 
     it("prevents test pollution by having an empty `this` created for the next spec", function () {
-        expect(this.foo).toEqual(0);
-        expect(this.bar).toBe(undefined);
+        //Fix assertions
+        //expect(this.foo).toEqual(?);
+        //expect(this.bar).toBe(?);
     });
 });

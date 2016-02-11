@@ -8,26 +8,14 @@ describe("Player", function () {
     });
 
     beforeEach(function () {
-        jasmine.addMatchers({
-            toBePlaying: function () {
-                return {
-                    compare: function (actual, expected) {
-                        var player = actual;
-
-                        return {
-                            pass: player.currentlyPlayingSong === expected && player.isPlaying
-                        };
-                    }
-                };
-            }
-        });
+        jasmine.addMatchers({});
     });
 
     it("should be able to play a Song", function () {
         player.play(song);
-        expect(player.currentlyPlayingSong).toEqual(song);
 
-        //demonstrates use of custom matcher
+        expect(player.currentlyPlayingSong).toEqual(song);
+        //Write custom matcher to assert like this: expect(player).toBePlaying(song)
         expect(player).toBePlaying(song);
     });
 
@@ -40,15 +28,9 @@ describe("Player", function () {
         it("should indicate that the song is currently paused", function () {
             expect(player.isPlaying).toBeFalsy();
 
-            // demonstrates use of 'not' with a custom matcher
-            expect(player).not.toBePlaying(song);
+            // Use custom matcher assertion to assert that song is not playing
         });
 
-        it("should be possible to resume", function () {
-            player.resume();
-            expect(player.isPlaying).toBeTruthy();
-            expect(player.currentlyPlayingSong).toEqual(song);
-        });
     });
 
 

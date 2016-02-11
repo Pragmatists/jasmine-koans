@@ -1,4 +1,5 @@
-xdescribe("A disabled suite", function () {
+//Disable suite with failing test
+describe("A disabled suite", function () {
     var foo;
 
     beforeEach(function () {
@@ -10,9 +11,10 @@ xdescribe("A disabled suite", function () {
     });
 });
 
+//Disable failing spec
 describe("Pending specs", function () {
 
-    xit("can be declared 'xit'", function () {
+    it("can be declared 'xit'", function () {
         expect(true).toBe(false);
     });
 
