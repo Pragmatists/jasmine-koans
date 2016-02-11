@@ -1,0 +1,15 @@
+{
+  "name": "jasmine-koans",
+  "version": "1.0.0",
+  "scripts" :{
+    "test": "karma start"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-jasmine": "^0.3.7",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.4"
+  }
+}
