@@ -14,21 +14,4 @@ describe("Asynchronous specs", function() {
             done();
         });
 
-        describe("long asynchronous specs", function() {
-            var originalTimeout;
-            beforeEach(function() {
-                originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
-                jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
-            });
-
-            it("takes a long time", function(done) {
-                setTimeout(function() {
-                    done();
-                }, 900);
-            });
-
-            afterEach(function() {
-                jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
-            });
-        });
 });
