@@ -1,4 +1,7 @@
 describe("A spy, when configured to call through", function() {
+    beforeEach(function () {
+        pending();
+    });
     var foo, bar, fetchedBar;
 
     beforeEach(function() {

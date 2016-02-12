@@ -1,5 +1,9 @@
 describe("A spec", function () {
     beforeEach(function () {
+        pending();
+    });
+
+    beforeEach(function () {
         this.foo = 0;
     });
 

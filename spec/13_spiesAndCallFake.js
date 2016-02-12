@@ -1,4 +1,7 @@
 describe("A spy, when configured with an alternate implementation", function() {
+    beforeEach(function () {
+        pending();
+    });
     var foo, bar, fetchedBar;
 
     beforeEach(function() {

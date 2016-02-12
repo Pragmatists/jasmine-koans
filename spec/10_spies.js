@@ -1,4 +1,8 @@
 describe("A spy", function() {
+    beforeEach(function () {
+        pending();
+    });
+
     var foo, bar = null;
 
     beforeEach(function() {

@@ -1,4 +1,8 @@
 describe("jasmine.objectContaining", function() {
+    beforeEach(function () {
+        pending();
+    });
+
     var foo;
 
     beforeEach(function() {

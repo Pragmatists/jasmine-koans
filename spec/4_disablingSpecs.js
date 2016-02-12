@@ -1,5 +1,9 @@
 //Disable suite with failing test
 describe("A disabled suite", function () {
+    beforeEach(function () {
+        pending();
+    });
+
     var foo;
 
     beforeEach(function () {
@@ -13,6 +17,9 @@ describe("A disabled suite", function () {
 
 //Disable failing spec
 describe("Pending specs", function () {
+    beforeEach(function () {
+        pending();
+    });
 
     it("can be declared 'xit'", function () {
         expect(true).toBe(false);

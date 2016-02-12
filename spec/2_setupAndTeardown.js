@@ -1,4 +1,7 @@
 describe("A spec (with setup and tear-down)", function () {
+    beforeEach(function () {
+        pending();
+    });
     var foo = 0;
 
     beforeEach(function () {

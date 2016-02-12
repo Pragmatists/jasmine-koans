@@ -1,4 +1,7 @@
 describe("A spy, when configured to throw an error", function() {
+    beforeEach(function () {
+        pending();
+    });
     var foo, bar;
 
     beforeEach(function() {

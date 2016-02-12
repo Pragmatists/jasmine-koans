@@ -1,4 +1,8 @@
 describe("Asynchronous specs", function() {
+    beforeEach(function () {
+        pending();
+    });
+
     var value;
 
         beforeEach(function() {

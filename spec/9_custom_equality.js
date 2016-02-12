@@ -1,4 +1,7 @@
 describe("custom equality", function () {
+    beforeEach(function () {
+        pending();
+    });
 
 
     beforeEach(function () {

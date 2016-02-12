@@ -1,4 +1,9 @@
 describe("Player", function () {
+    beforeEach(function () {
+        pending();
+    });
+
+
     var player;
     var song;
 

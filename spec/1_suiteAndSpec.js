@@ -1,4 +1,8 @@
 describe("A suite", function () {
+    beforeEach(function () {
+        pending();
+    });
+
     var foo = 1;
 
     it("contains spec with an expectation", function () {
