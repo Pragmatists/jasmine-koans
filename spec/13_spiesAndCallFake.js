@@ -13,13 +13,6 @@ describe("A spy, when configured with an alternate implementation", function() {
                 return bar;
             }
         };
-
-        spyOn(foo, "getBar").and.callFake(function() {
-            return 1001;
-        });
-
-        foo.setBar(123);
-        fetchedBar = foo.getBar();
     });
 
     it("tracks that the spy was called", function() {

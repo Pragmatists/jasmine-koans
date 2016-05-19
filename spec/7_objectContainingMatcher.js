@@ -22,8 +22,10 @@ describe("jasmine.objectContaining", function() {
             bar: "fizz"
         };
 
-        //Change assertion to check that "foo" variable is equal to "result" ignoring "bar" property
-        expect(foo).toEqual(result);
+        //change to single assertion (use jasmine.objectContaining)
+        expect(foo.a).toEqual(1);
+        expect(foo.b).toEqual(2);
+        expect(foo.c).toEqual(3);
     });
 
 });
